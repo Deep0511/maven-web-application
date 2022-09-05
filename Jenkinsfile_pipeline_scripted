@@ -14,14 +14,14 @@ stage ('CheckOutCode') {
 git branch: 'development', credentialsId: '0cd3bd27-ad11-4c89-8bef-b199f1212bbc', url: 'https://github.com/Deep0511/maven-web-application.git'
 }
 stage ('BuildArtifact') {
-sh "${mavenHome}/bin/mvn clean package"
+sh "${mavenHome}/bin/mvn clean packagee"
 }
 /* stage ('ExecutSonarQubeReport')
 {
 sh "${mavenHome}/bin/mvn clean sonar:sonar package"
 }
 stage ('UploadArtifactInToArtifactRepo') {
-sh "${mavenHome}/bin/mvn clean deploy1"
+sh "${mavenHome}/bin/mvn clean deploy"
 }
 stage ('DeployIntoTomcatServer') {
 sshagent(['6a840ee9-aa5f-40ff-b5da-e1482bd33cdd']) {
