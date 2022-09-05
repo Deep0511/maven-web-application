@@ -14,7 +14,7 @@ stage ('CheckOutCode') {
 git branch: 'development', credentialsId: '0cd3bd27-ad11-4c89-8bef-b199f1212bbc', url: 'https://github.com/Deep0511/maven-web-application.git'
 }
 stage ('BuildArtifact') {
-sh "${mavenHome}/bin/mvn clean packagee"
+sh "${mavenHome}/bin/mvn clean package"
 }
 /* stage ('ExecutSonarQubeReport')
 {
