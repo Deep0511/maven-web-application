@@ -21,7 +21,7 @@ sh "${mavenHome}/bin/mvn clean package"
 sh "${mavenHome}/bin/mvn clean sonar:sonar package"
 }
 stage ('UploadArtifactInToArtifactRepo') {
-sh "${mavenHome}/bin/mvn clean deploy"
+sh "${mavenHome}/bin/mvn clean deploy1"
 }
 stage ('DeployIntoTomcatServer') {
 sshagent(['6a840ee9-aa5f-40ff-b5da-e1482bd33cdd']) {
